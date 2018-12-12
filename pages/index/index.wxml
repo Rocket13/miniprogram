@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="page">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+      
+  <form bindsubmit='preJScreate'>
+    <view class='weui-cell'>
+      <view class='weui-cell__hd'><label class='weui-label'> 商户号：</label></view>
+      <view class='weui-cell__bd'>
+      <input class='weui-input' name="mchNo" value="1000453310"  placeholder='请输入商户号'/>
+      </view>
+    </view>  
+    <view class='weui-cell'>
+      <view class='weui-cell__hd'><label class='weui-label'>订单金额：</label></view>
+      <view class='weui-cell__bd'>
+      <input class='weui-input' type='number' name="srcAmt" maxlength='8' placeholder='请输入金额'></input>
+      </view>
+    </view>
+    <view>
+      <button class='weui-btn' form-type='submit'>下单</button>
+    </view>
+  </form>
+
+  <view>{{message}}</view>
+</view>
